@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  /* general stuff */
+  --color-accent: #9FA8FB;
+  --color-gray: #DEE0E0;
+  --font-sans: "Raleway", sans-serif;
+  /* text colors */
+  --color-teal: #6EBF90;
+  --color-purple: #6069B5;
+  --color-pink: #DE2161;
+  --color-magenta: #850050;
+  /* background */
+  --color-bg-teal: #F0F7F6;
+  --color-bg-purple: #F6F7FF;
+  --color-bg-pink: #FDF5F7;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+}
