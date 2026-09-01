@@ -6,23 +6,10 @@ interface InternshipDetailsProps {
 
 export const InternshipDetails = ({ internship }: InternshipDetailsProps) => {
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 h-[80%] justify-center">
             <div>
-                <h3 className="text-2xl font-semibold">{internship.company}</h3>
-                <p className="text-sm text-gray-600">{internship.title}</p>
-                <p className="text-sm text-gray-500">{internship.dates}</p>
-            </div>
-
-            {/* Technologies */}
-            <div>
-                <p className="text-xs font-semibold text-gray-700 uppercase mb-2">Tech Stack</p>
-                <div className="flex flex-wrap gap-2">
-                    {internship.technologies.map((tech) => (
-                        <span key={tech} className="text-xs bg-gray-200 px-2 py-1 rounded">
-                            {tech}
-                        </span>
-                    ))}
-                </div>
+                <h1 className="text-2xl">{internship.company}</h1>
+                <p className="text-sm">{internship.dates} | {internship.title}</p>
             </div>
 
             {/* Highlights */}
@@ -39,7 +26,7 @@ export const InternshipDetails = ({ internship }: InternshipDetailsProps) => {
 
             {/* Links */}
             {internship.links && internship.links.length > 0 && (
-                <div className="flex gap-4 pt-2">
+                <div className="flex gap-4">
                     {internship.links.map((link) => (
                         <a
                             key={link.text}
@@ -53,6 +40,17 @@ export const InternshipDetails = ({ internship }: InternshipDetailsProps) => {
                     ))}
                 </div>
             )}
+
+            {/* Technologies */}
+            <div>
+                <div className="flex flex-wrap gap-2">
+                    {internship.technologies.map((tech) => (
+                        <span key={tech} className="text-xs bg-gray-200 px-2 py-1 rounded">
+                            {tech}
+                        </span>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };

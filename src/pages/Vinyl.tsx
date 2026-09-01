@@ -6,84 +6,92 @@ import { VinylPlayer } from "../components/VinylPlayer";
 import { InternshipDetails } from "../components/InternshipDetails";
 import type { InternshipDetail } from "../types/internship";
 
-const TITLE = "Track record"
-const SUBTITLE = "Learn about my different work experiences by clicking through the records."
-
 const VINYL_RECORDS: InternshipDetail[] = [
     {
         id: "genius-ai",
         cover: "/images/vinyl/covers/genius-ai.png",
         disc: "/images/vinyl/discs/genius-ai.png",
         company: "Genius AI",
-        title: "Software Engineering Intern",
-        dates: "May – Aug 2024",
-        technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        title: "Software Engineer Intern",
+        dates: "Jun – Aug 2026",
+        technologies: ["React Native", "CircleCI", "AWS", "OIDC", "Jest", "Maestro"],
         highlights: [
-            "Built feature placeholder 1",
-            "Improved placeholder metric by X%"
-        ],
-        links: [{ text: "View project", url: "#" }]
+            "Rebuilt onboarding for 6 features, driving a 25.3% lift in day-7 adoption",
+            "Owned an A/B test end to end, reducing subscription downgrades by 17%",
+            "Built the marketing site's first staging environment, resolving a legacy CI integration limit; also implemented a unit test framework"
+        ]
     },
     {
         id: "miovision",
         cover: "/images/vinyl/covers/miovision.png",
         disc: "/images/vinyl/discs/miovision.png",
-        company: "MioVision",
-        title: "Backend Engineering Intern",
-        dates: "Jan – Apr 2024",
-        technologies: ["Python", "Django", "AWS", "PostgreSQL"],
+        company: "Miovision Technologies",
+        title: "Software Engineer Intern",
+        dates: "Sep – Dec 2025",
+        technologies: ["Angular", "TailwindCSS", "Cypress", "Vitest"],
         highlights: [
-            "Placeholder achievement 1",
-            "Placeholder achievement 2"
+            "Built map-based frontend features for configuring traffic-signal intersection geometry",
+            "Traced a cluster of crosswalk detector defects to a flawed data modeling assumption",
+            "Adopted Angular's signal and computed state patterns to replace legacy subscription logic"
         ]
     },
     {
         id: "magi",
         cover: "/images/vinyl/covers/magi.png",
         disc: "/images/vinyl/discs/magi.png",
-        company: "Magi",
-        title: "Full Stack Developer",
-        dates: "May – Aug 2023",
-        technologies: ["React", "Node.js", "MongoDB", "Docker"],
+        company: "MAGI Inc.",
+        title: "Software Engineer Intern",
+        dates: "Jan – Apr 2025",
+        technologies: ["React", "Next.js", "FastAPI", "LangChain", "TanStack Query", "Zustand"],
         highlights: [
-            "Placeholder work item 1",
-            "Placeholder work item 2"
-        ]
+            "Proposed, designed, and shipped a fullstack Streaks retention feature, boosting engagement 18-20% and signups 25%",
+            "Architected a mobile web product from scratch, building a swipe-based discovery flow",
+            "Ran A/B tests evaluating cost tradeoffs for LLM-powered features",
+            "Launched 15+ A/B tests across onboarding, chat, and retention features"
+        ],
+        links: [{ text: "Built this marketing site", url: "https://magi.inc/" }]
     },
     {
         id: "wolf",
         cover: "/images/vinyl/covers/wolf.png",
         disc: "/images/vinyl/discs/wolf.png",
-        company: "Wolf",
-        title: "Software Engineering Intern",
-        dates: "Sep – Dec 2022",
-        technologies: ["Java", "Spring Boot", "MySQL"],
+        company: "WOLF Advanced Technologies",
+        title: "Software Engineer & Design Intern",
+        dates: "May – Aug 2024",
+        technologies: ["Blazor", "C# .NET", "Figma"],
         highlights: [
-            "Placeholder experience 1"
-        ]
+            "Built features in Blazor for a project management platform and a sales/accounting platform",
+            "Standardized a service layer pattern for async data fetching, documenting it for broader use",
+            "Pioneered a Figma-based design system with reusable components, reducing UI implementation time",
+        ],
+        links: [{ text: "Led design efforts", url: "https://www.figma.com/design/UMwJ18H6bobJJWp26zCDvR/Tam---Design-Samples?node-id=2-2" }]
     },
     {
         id: "hatch",
         cover: "/images/vinyl/covers/hatch.png",
         disc: "/images/vinyl/discs/hatch.png",
-        company: "Hatch",
-        title: "Junior Developer",
-        dates: "Jan – Apr 2022",
-        technologies: ["JavaScript", "React", "Node.js"],
+        company: "Hatch, Digital Products",
+        title: "Software Engineer Intern",
+        dates: "Sep – Dec 2023",
+        technologies: ["Angular", "TypeScript", "Jest"],
         highlights: [
-            "Placeholder role description"
+            "Developed front-end features for a mining application, increasing test coverage by 15%",
+            "Evaluated and implemented open-source libraries for geospatial coordinate conversions",
+            "Facilitated Scrum retrospectives to drive team engagement",
+            "Partnered with designers to proactively align feature specifications"
         ]
     },
     {
         id: "iirc",
         cover: "/images/vinyl/covers/iirc.png",
         disc: "/images/vinyl/discs/iirc.png",
-        company: "IIRC",
-        title: "Software Developer",
-        dates: "May – Aug 2021",
-        technologies: ["Python", "Flask"],
+        company: "Immigrations, Refugees, Citizenship Canada",
+        title: "Automated Test Developer",
+        dates: "Jan – Apr 2023",
+        technologies: ["Java", "Selenium", "Swagger UI"],
         highlights: [
-            "Placeholder first role"
+            "Developed automated test scripts, driving a 20% increase in test coverage",
+            "Worked with developers to reduce API latency by 10%"
         ]
     }
 ];
@@ -138,10 +146,10 @@ const Vinyl = () => {
                         <div className="flex flex-col gap-6">
                             <div>
                                 {/* <h1>{TITLE}</h1> */}
-                                <h2>{SUBTITLE}</h2>
+                                {/* <h2>{SUBTITLE}</h2> */}
                             </div>
                             {/* going to have the vinyl player and the details here */}
-                            <div className="flex gap-8">
+                            <div className="flex gap-8 flex-col md:flex-row">
                                 {/* left col with the turntable and discs that are dependent on which cover is selected */}
                                 <VinylPlayer 
                                     selectedDiscImage={VINYL_RECORDS.find(r => r.id === selectedId)?.disc || VINYL_RECORDS[0].disc}
@@ -152,7 +160,7 @@ const Vinyl = () => {
                                 />
 
                                 {/* right col with the details of that turntable job experience */}
-                                <div className="flex-1 flex items-center">
+                                <div className="flex-1">
                                     <InternshipDetails internship={VINYL_RECORDS.find(r => r.id === selectedId) || VINYL_RECORDS[0]} />
                                 </div>
                             </div>

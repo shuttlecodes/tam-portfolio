@@ -2,6 +2,7 @@ import { IkigaiGood } from "../assets/ikigai/IkigaiGood";
 import { IkigaiLove } from "../assets/ikigai/IkigaiLove";
 import { IkigaiWorld } from "../assets/ikigai/IkigaiWorld";
 import { IkigaiSustain } from "../assets/ikigai/IkigaiSustain";
+import { ChevronDownIcon } from "../assets/icons/ChevronDownIcon";
 import ScrollFadeIn from "../components/ScrollFadeIn";
 
 const CONTEXT_TITLE = "Ikigai"
@@ -37,15 +38,20 @@ const VAL_CARDS = [
 
 const Values = () => {
     return (
-        <div className="py-20 pr-20 pl-36 bg-bg-pink min-h-screen flex items-center justify-center">
-            <div className="flex flex-col gap-10 max-w-xl">
+        <div className="py-20 pr-20 pl-36 bg-bg-pink min-h-screen flex items-center justify-center overflow-hidden">
+            <div className="flex flex-col gap-20 max-w-xl relative">
                 <ScrollFadeIn>
-                    <div className="flex gap-10 py-70">
-                        {/* to do: make it snappy */}
-                        <h1 className="leading-[1.2]">{CONTEXT_TITLE}</h1>
-                        <p className="whitespace-pre-line pt-2">{CONTEXT_BODY}</p>
+                    <div className="flex flex-col gap-20 py-70">
+                        <div className="flex gap-10">
+                            <h1 className="leading-[1.2]">{CONTEXT_TITLE}</h1>
+                            <p className="whitespace-pre-line pt-2">{CONTEXT_BODY}</p>
+                        </div>
+                        <div className="flex justify-center animate-bounce text-gray-700">
+                            <ChevronDownIcon className="w-6 h-6" />
+                        </div>
                     </div>
                 </ScrollFadeIn>
+
                 <div className="flex flex-col gap-10">
                     <ScrollFadeIn>
                         <h1>{VAL_TITLE}</h1>
