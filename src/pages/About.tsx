@@ -7,25 +7,25 @@ const images = [
     "/images/about/observe.png",
 ];
 
-const TITLE = "More about this website";
-const SUBTITLE = "and the process of building it.";
+const TITLE = "Looks like you've reached the end";
+const SUBTITLE = "Here's more about me and this website";
 
 const TEXT_CARDS = [
     {
-        bold: "Looked at the Gloss Genius website",
-        body: "and noted down a few observations! I wanted to go with the same light-coloured theme, with rounded edges."
-    },
-    {
-        bold: "Made some wireframes on Figma,",
-        body: "while also getting inspiration from Dribbble."
+        bold: "Revamp of my old portfolio website,",
+        body: "which had a vinyl theme! I built wireframes and designed the record player assets with Figma."
     },
     {
         bold: "Built using React, TailwindCSS, and Vite!",
-        body: "I deployed with Vercel - Check out the GitHub repo for details."
+        body: "I used Framer Motion for animations, and deployed with Vercel."
     },
     {
-        bold: "If I had more time",
-        body: "I would’ve liked to add more animations,  make this responsive & accessible."
+        bold: "So what's next?",
+        body: "I'm touching up my projects page, and working on a more animations, especially in the vinyl page."
+    },
+    {
+        bold: "Feel free to reach me!",
+        body: "You can find me on LinkedIn via email. I'm always open to chat, whether it's about work or photography, music, food, etc!"
     }
 ]
 
@@ -43,7 +43,7 @@ const About = () => {
     }, [image]);
 
     return (
-        <div className="py-20 pr-20 pl-36 bg-bg-teal min-h-screen flex items-center">
+        <div className="p-20 bg-bg-purple min-h-screen flex items-center">
             <div className="max-w-2xl mx-auto flex flex-col gap-4">
                 <ScrollFadeIn>
                     <div className="flex flex-col">
@@ -51,7 +51,7 @@ const About = () => {
                         <h2>{SUBTITLE}</h2>
                     </div>
                 </ScrollFadeIn>
-                <div className="flex gap-6">
+                <div className="flex gap-6 flex-col md:flex-row">
                     <div className="flex flex-col gap-4">
                         {TEXT_CARDS.map((card, index) => {
                             return (

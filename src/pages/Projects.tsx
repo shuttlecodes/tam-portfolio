@@ -5,7 +5,7 @@ const SUBTITLE = "Details coming soon!";
 
 const Projects = () => {
     return (
-        <div className="p-6 pt-24 md:py-20 md:pr-20 md:pl-36 bg-bg-yellow min-h-screen flex items-center justify-center">
+        <div className="p-6 pt-24 md:py-20 md:pr-20 md:pl-36 bg-bg-teal min-h-screen flex items-center justify-center">
             <div className="flex flex-col gap-10 items-center text-center">
                 <ScrollFadeIn>
                     <div className="flex flex-col gap-4">
