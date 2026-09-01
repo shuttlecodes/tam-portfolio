@@ -77,7 +77,7 @@ const Values = () => {
                         return (
                             <div key={card.bold} className={`flex gap-6 items-center ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}>
                                 <ScrollFadeIn delay={0.1}>
-                                    <div className="flex flex-col gap-2 bg-white p-6 rounded-xl h-min">
+                                    <div className="flex flex-col gap-2 bg-white p-6 rounded-lg h-min">
                                         <p><span className={`${card.color} font-bold`}>{card.bold}</span> {card.body}</p>
                                     </div>
                                 </ScrollFadeIn>

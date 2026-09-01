@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import ScrollFadeIn from "../components/ScrollFadeIn";
 
 const images = [
+    "/images/about/old-site-vinyl.png",
+    "/images/about/figma-vinyl-wip.png",
     "/images/about/figma.png",
     "/images/about/observe.png",
 ];
@@ -12,8 +14,8 @@ const SUBTITLE = "Here's more about me and this website";
 
 const TEXT_CARDS = [
     {
-        bold: "Revamp of my old portfolio website,",
-        body: "which had a vinyl theme! I built wireframes and designed the record player assets with Figma."
+        bold: "Revamp of my old portfolio website!",
+        body: "Built wireframes and designed the assets (record player, ikigai) with Figma."
     },
     {
         bold: "Built using React, TailwindCSS, and Vite!",
@@ -38,7 +40,7 @@ const About = () => {
             const currentIndex = images.indexOf(image);
             const nextIndex = (currentIndex + 1) % images.length;
             setImage(images[nextIndex]);
-        }, 5000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [image]);
 
@@ -56,7 +58,7 @@ const About = () => {
                         {TEXT_CARDS.map((card, index) => {
                             return (
                                 <ScrollFadeIn key={card.bold} delay={index * 0.1}>
-                                    <p className="bg-white p-4 rounded-xl h-min"><span className="font-bold text-purple">{card.bold}</span> {card.body}</p>
+                                    <p className="bg-white p-4 rounded-lg h-min"><span className="font-bold text-purple">{card.bold}</span> {card.body}</p>
                                 </ScrollFadeIn>
                             );
                         })}
@@ -67,7 +69,7 @@ const About = () => {
                                 key={image}
                                 src={image}
                                 alt=""
-                                className="min-w-[360px] h-[400px] rounded-xl object-cover"
+                                className="min-w-[360px] h-[400px] rounded-lg object-cover"
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
