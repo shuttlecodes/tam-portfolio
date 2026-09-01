@@ -16,8 +16,8 @@ const VINYL_RECORDS: InternshipDetail[] = [
         dates: "Jun – Aug 2026",
         technologies: ["React Native", "CircleCI", "AWS", "OIDC", "Jest", "Maestro"],
         highlights: [
-            "Rebuilt onboarding for 6 features, driving a 25.3% lift in day-7 adoption",
-            "Owned an A/B test end to end, reducing subscription downgrades by 17%",
+            "Rebuilt onboarding for 6 features, driving a 25.3% lift in day-7 adoption, led by 175.4% more customers ordering a card reader (a segment with 28x GPV)",
+            "Owned an A/B test E2E, reducing subscription downgrades by 17%",
             "Built the marketing site's first staging environment, resolving a legacy CI integration limit; also implemented a unit test framework"
         ]
     },
@@ -120,7 +120,7 @@ const Vinyl = () => {
         <div className="p-6 pt-24 md:py-20 md:px-20 bg-bg-purple min-h-screen flex items-center">
             <div className="flex gap-20 flex-col md:flex-row size-full items-center">
                 {/* left col with all the 6 vinyl covers that will act as buttons */}
-                <div className="flex flex-col gap-4 md:w-24">
+                <div className="md:flex flex-col gap-4 w-16 md:w-24 hidden">
                     {VINYL_RECORDS.map((record) => (
                         <button
                             key={record.id}
@@ -149,7 +149,7 @@ const Vinyl = () => {
                                 {/* <h2>{SUBTITLE}</h2> */}
                             </div>
                             {/* going to have the vinyl player and the details here */}
-                            <div className="flex gap-8 flex-col md:flex-row">
+                            <div className="flex gap-8 flex-col lg:flex-row">
                                 {/* left col with the turntable and discs that are dependent on which cover is selected */}
                                 <VinylPlayer 
                                     selectedDiscImage={VINYL_RECORDS.find(r => r.id === selectedId)?.disc || VINYL_RECORDS[0].disc}
@@ -161,7 +161,10 @@ const Vinyl = () => {
 
                                 {/* right col with the details of that turntable job experience */}
                                 <div className="flex-1">
-                                    <InternshipDetails internship={VINYL_RECORDS.find(r => r.id === selectedId) || VINYL_RECORDS[0]} />
+                                    <InternshipDetails
+                                        key={selectedId}
+                                        internship={VINYL_RECORDS.find(r => r.id === selectedId) || VINYL_RECORDS[0]}
+                                    />
                                 </div>
                             </div>
                         </div>
