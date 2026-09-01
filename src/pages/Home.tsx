@@ -1,5 +1,6 @@
 import ScrollFadeIn from "../components/ScrollFadeIn";
-import headshotBW from "/images/home/headshot-bw.png";
+import headshot from "/images/home/headshot.png";
+// import headshotBW from "/images/home/headshot-bw.png";
 import { motion } from "framer-motion";
 
 const TITLE = "Hi, I'm Tam Mai";
@@ -11,7 +12,7 @@ const RESUME_LINK = "For the TLDR, check out my resume here:"
 const Home = () => {
 
     return (
-        <div className="p-6 pt-24 md:py-20 md:pr-20 md:pl-36 bg-bg-teal min-h-screen flex items-center justify-center">
+        <div className="p-6 pt-24 md:py-20 md:pr-20 md:pl-36 bg-bg-purple min-h-screen flex items-center justify-center">
             <div className="flex gap-10 md:flex-row flex-col items-center">
                 <div className="relative flex items-center justify-center">
                     <motion.div
@@ -23,7 +24,7 @@ const Home = () => {
                         }}
                         className="absolute w-80 h-80 bg-blue-200 rounded-full"
                     />
-                    <img src={headshotBW} alt="Tam Mai headshot" className="max-w-xs relative z-10"/>
+                    <img src={headshot} alt="Headshot" className="max-w-xs relative z-10"/>
                 </div>
                 <div className="max-w-md mx-auto flex flex-col gap-4">
                     <ScrollFadeIn>
