@@ -7,7 +7,7 @@ const Footer = () => {
                 <p><a href="mailto:ttmai@uwaterloo.ca" target="_blank" >ttmai@uwaterloo.ca</a></p>
                 <p><a href="https://www.linkedin.com/in/tam-t-mai/" target="_blank" >linkedin.com/in/tam-t-mai</a></p>
             </div>
-            <a href="https://github.com/shuttlecodes" target="_blank" className="bg-accent rounded-2xl py-1 px-3 flex items-center justify-center text-white">
+            <a href="https://github.com/shuttlecodes" target="_blank" className="bg-accent rounded-2xl py-1 px-3 flex items-center justify-center text-white hover:scale-105 transition-transform">
                 <GitHubIcon />
             </a>
         </div>

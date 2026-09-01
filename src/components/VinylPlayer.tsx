@@ -56,7 +56,7 @@ export const VinylPlayer = ({ selectedDiscImage, isPlaying, onTogglePlay, onPrev
 
                 <button
                     onClick={onTogglePlay}
-                    className="p-3 rounded-full bg-accent hover:bg-accent/90 transition-colors"
+                    className="p-3 rounded-full bg-accent hover:scale-105 transition-transform"
                     aria-label={isPlaying ? "Pause" : "Play"}
                 >
                     {isPlaying ? (

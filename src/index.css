@@ -31,3 +31,20 @@
     font-size: 16px;
   }
 }
+
+/* Hide native scrollbars but keep scrolling functional */
+html, body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* WebKit-based browsers */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keep scrollbars visible when user explicitly requests (accessibility) */
+@media (pointer: coarse) {
+  html, body { scrollbar-width: auto; }
+  html::-webkit-scrollbar, body::-webkit-scrollbar { display: block; }
+}
