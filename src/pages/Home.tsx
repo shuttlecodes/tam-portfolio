@@ -3,7 +3,8 @@ import headshotBW from "/images/home/headshot-bw.png";
 import { motion } from "framer-motion";
 
 const TITLE = "Hi, I'm Tam Mai";
-const SUBTITLE = "Software engineer 🛠️ and sometimes a designer 🎨 but perpetually a music enthusiast 🎵";
+const SUBTITLE = "Software engineer and 4th year Systems Design Engineering student at the University of Waterloo.";
+// const SUBTITLE = "Software engineer 🛠️ and sometimes a designer 🎨 but perpetually a music enthusiast 🎵";
 const BODY_TEXT = "I care about building things well and owning them end to end. This site walks through some of that work, plus what drives me to build.";
 const RESUME_LINK = "For the TLDR, check out my resume here:"
 
@@ -24,7 +25,7 @@ const Home = () => {
                     />
                     <img src={headshotBW} alt="Tam Mai headshot" className="max-w-xs relative z-10"/>
                 </div>
-                <div className="max-w-xl mx-auto flex flex-col gap-4">
+                <div className="max-w-md mx-auto flex flex-col gap-4">
                     <ScrollFadeIn>
                         <div className="flex flex-col">
                             <h1>{TITLE}</h1>
@@ -33,7 +34,7 @@ const Home = () => {
                     </ScrollFadeIn>
                     <ScrollFadeIn delay={0.2}>
                         {/* make rounded-lg default */}
-                        <div className="bg-white p-4 rounded-lg w-full max-w-[400px] flex flex-col gap-4">
+                        <div className="bg-white p-4 rounded-lg w-full flex flex-col gap-4">
                             <p>{BODY_TEXT}</p>
                             <p>{RESUME_LINK}</p>
                         </div>
