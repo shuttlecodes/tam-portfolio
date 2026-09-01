@@ -4,32 +4,32 @@ import { IkigaiWorld } from "../assets/ikigai/IkigaiWorld";
 import { IkigaiSustain } from "../assets/ikigai/IkigaiSustain";
 import ScrollFadeIn from "../components/ScrollFadeIn";
 
-const CONTEXT_TITLE = "Ikigai + context"
-const CONTEXT_BODY = "I gave a sneak peak of this in the home page, but a concept I learned about in high school that’s stuck with me since, has been “Ikigai” (生きがい).\n\nIt’s this idea that an individual’s life purpose involves finding the balance between four factors: what you love, what you are good at, what the world needs, and what can sustain you.\n\nThroughout my work experiences, I’ve been learning more about myself, my skills, and my passions!"
+const CONTEXT_TITLE = "Ikigai"
+const CONTEXT_BODY = "What are my north stars? One of the ways I enjoy explaining it is through the lens of “Ikigai” (生きがい).\n\nIt’s this idea that an individual’s life purpose involves finding the balance between four factors: what you love, what you are good at, what the world needs, and what can sustain you.\n\nThroughout my work experiences, I’ve been learning more about what drives me to build my technical knowledge and always aim to learn."
 
 const VAL_TITLE = "Diving into what this means"
 const VAL_CARDS = [
     {
-        bold: "I aspire to build something that helps real people.",
-        body: "I love that Gloss Genius empowers individuals by building tools that help manage the day-to-day operations of running a business! This is such a meaningful and impactful way to support people who want to pursue their true passions.",
+        bold: "I want my work to actually help people.",
+        body: "Whether it's a feature that helps users meet their goals or infrastructure that quietly keeps things running, I care about building things that make a real difference for the people who use them.",
         color: "text-teal",
         visual: <IkigaiWorld />
     },
     {
-        bold: "I love creating things!",
-        body: "Whether this be in the context of software or as part of my hobbies (scrapbooking, sketching, photography), I love working with aesthetics and being part of spaces where I can learn, grow, and share new ideas!",
+        bold: "I love figuring things out.",
+        body: "I'm drawn to hard problems: tracing a bug to its real root cause, untangling a system I don't fully understand yet, or learning a new tool because it's the right one for the job.",
         color: "text-purple",
         visual: <IkigaiLove />
     },
     {
-        bold: "I’ve built up experience in software.",
-        body: "With most comfort veering towards front-end and full-stack work, I especially enjoy working on client-facing applications. I love learning more about the specific users I’m building tools for, and developing better intuition on their needs.",
+        bold: "I've built range across the stack.",
+        body: "I gravitate toward frontend work, but I enjoy stretching into backend and infrastructure too. I like owning problems end to end, from understanding a system's constraints to shipping the fix.",
         color: "text-pink",
         visual: <IkigaiGood />
     },
     {
-        bold: "Team growth is important to me!",
-        body: "I was excited to learn about how Gloss Genius is expanding its work to cater towards the “up market” now too, and even explore different verticals that involve appointment bookings! The future looks rather promising for the organization.",
+        bold: "I want to grow alongside a team that's growing too.",
+        body: "I'm drawn to teams that are driven by impact, at companies that are growing, where I can keep learning to be a better engineer.",
         color: "text-magenta",
         visual: <IkigaiSustain />
     }
