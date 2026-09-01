@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { IkigaiGood } from "../assets/ikigai/IkigaiGood";
 import { IkigaiLove } from "../assets/ikigai/IkigaiLove";
 import { IkigaiWorld } from "../assets/ikigai/IkigaiWorld";
@@ -37,6 +38,15 @@ const VAL_CARDS = [
 ]
 
 const Values = () => {
+    const nextSectionRef = useRef<HTMLDivElement | null>(null);
+
+    const scrollToNextSection = () => {
+        nextSectionRef.current?.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    };
+
     return (
         <div className="py-20 pr-20 pl-36 bg-bg-pink min-h-screen flex items-center justify-center overflow-hidden">
             <div className="flex flex-col gap-20 max-w-xl relative">
@@ -46,13 +56,20 @@ const Values = () => {
                             <h1 className="leading-[1.2]">{CONTEXT_TITLE}</h1>
                             <p className="whitespace-pre-line pt-2">{CONTEXT_BODY}</p>
                         </div>
-                        <div className="flex justify-center animate-bounce text-gray-700">
-                            <ChevronDownIcon className="w-6 h-6" />
+                        <div className="flex justify-center">
+                            <button
+                                type="button"
+                                onClick={scrollToNextSection}
+                                aria-label="Scroll to Ikigai details"
+                                className="animate-bounce text-gray-700 transition-transform hover:scale-110"
+                            >
+                                <ChevronDownIcon className="w-6 h-6" />
+                            </button>
                         </div>
                     </div>
                 </ScrollFadeIn>
 
-                <div className="flex flex-col gap-10">
+                <div ref={nextSectionRef} className="flex flex-col gap-10 py-20">
                     <ScrollFadeIn>
                         <h1>{VAL_TITLE}</h1>
                     </ScrollFadeIn>
