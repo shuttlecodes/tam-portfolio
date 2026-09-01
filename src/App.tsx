@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import Vinyl from "./pages/Vinyl";
+import Projects from "./pages/Projects";
 import Values from "./pages/Values";
 import About from "./pages/About";
-import Gloss from "./pages/Gloss";
 import Footer from "./components/Footer";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/vinyl" element={<Vinyl />} />
-            <Route path="/why-gloss" element={<Gloss />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/my-values" element={<Values />} />
             <Route path="/about" element={<About />} />
           </Routes>

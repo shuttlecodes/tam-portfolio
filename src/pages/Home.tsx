@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const TITLE = "Hi, I'm Tam Mai";
 const SUBTITLE = "Software engineer and 4th year Systems Design Engineering student at the University of Waterloo.";
 // const SUBTITLE = "Software engineer 🛠️ and sometimes a designer 🎨 but perpetually a music enthusiast 🎵";
-const BODY_TEXT = "I care about building things well and owning them end to end. This site walks through some of that work, plus what drives me to build.";
+const BODY_TEXT = "I care about building things well and owning them end to end. This site walks through some of that work, plus what motivates me.";
 const RESUME_TEXT = "For the TLDR, check out my";
 
 const Home = () => {

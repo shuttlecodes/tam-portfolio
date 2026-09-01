@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { HomeIcon } from "../assets/icons/HomeIcon";
 import { VinylIcon } from "../assets/icons/VinylIcon";
-import { GlossIcon } from "../assets/icons/GlossIcon";
+import { ProjectsIcon } from "../assets/icons/ProjectsIcon";
 import { StarIcon } from "../assets/icons/StarIcon";
 import { InfoIcon } from "../assets/icons/InfoIcon";
 
@@ -11,8 +11,8 @@ const Sidebar = () => {
     const navItems = [
         { path: "/", icon: HomeIcon },
         { path: "/vinyl", icon: VinylIcon },
+        { path: "/projects", icon: ProjectsIcon },
         { path: "/my-values", icon: StarIcon },
-        { path: "/why-gloss", icon: GlossIcon },
         { path: "/about", icon: InfoIcon },
     ];
 
