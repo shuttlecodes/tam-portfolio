@@ -4,10 +4,10 @@ const Footer = () => {
     return (
         <div className="fixed top-6 md:top-auto md:bottom-6 right-6 flex gap-4 items-center text-right text-black">
             <div className="flex flex-col">
-                <p>February 2026</p>
-                <p>Tam Mai x Gloss Genius</p>
+                <p><a href="mailto:ttmai@uwaterloo.ca" target="_blank" >ttmai@uwaterloo.ca</a></p>
+                <p><a href="https://www.linkedin.com/in/tam-t-mai/" target="_blank" >linkedin.com/in/tam-t-mai</a></p>
             </div>
-            <a href="https://github.com/shuttlecodes/gloss-genius-site" target="_blank" rel="noopener noreferrer" className="bg-accent rounded-2xl py-1 px-3 flex items-center justify-center text-white">
+            <a href="https://github.com/shuttlecodes" target="_blank" className="bg-accent rounded-2xl py-1 px-3 flex items-center justify-center text-white">
                 <GitHubIcon />
             </a>
         </div>
