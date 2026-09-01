@@ -1,0 +1,27 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.vinyl-disc-spinning {
+    animation: spin 4s linear infinite;
+}
+
+.needle-tilt {
+    transform: rotate(25deg);
+    transform-origin: top left;
+    animation: needleSwing 2s ease-in-out infinite;
+}
+
+@keyframes needleSwing {
+    0%, 100% {
+        transform: rotate(-11deg);
+    }
+    50% {
+        transform: rotate(-12deg);
+    }
+}
