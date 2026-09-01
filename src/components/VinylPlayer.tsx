@@ -10,6 +10,7 @@ import "./VinylPlayer.css";
 import { BackIcon } from "../assets/icons/BackIcon";
 import { PlayIcon } from "../assets/icons/PlayIcon";
 import { NextIcon } from "../assets/icons/NextIcon";
+import { PauseIcon } from "../assets/icons/PauseIcon";
 
 export const VinylPlayer = ({ selectedDiscImage, isPlaying, onTogglePlay, onPrevious, onNext }: VinylPlayerProps) => {
     return (
@@ -32,11 +33,13 @@ export const VinylPlayer = ({ selectedDiscImage, isPlaying, onTogglePlay, onPrev
                     />
                 </div>
 
-                {/* Layer 3: Needle on top with tilt and subtle swing */}
+                {/* (No center overlay) needle animation controlled by `isPlaying` below */}
+
+                {/* Layer 3: Needle on top with tilt and subtle swing when playing */}
                 <img
                     src="/images/vinyl/turntable/needle.png"
                     alt="needle"
-                    className="absolute w-8 h-auto object-contain z-10 needle-tilt"
+                    className={`absolute w-8 h-auto object-contain z-10 ${isPlaying ? "needle-tilt" : ""}`}
                     style={{ top: "10%", left: "10%" }}
                 />
             </div>
@@ -56,7 +59,11 @@ export const VinylPlayer = ({ selectedDiscImage, isPlaying, onTogglePlay, onPrev
                     className="p-3 rounded-full bg-accent hover:bg-accent/90 transition-colors"
                     aria-label={isPlaying ? "Pause" : "Play"}
                 >
-                    <PlayIcon className="w-6 h-6 text-white" />
+                    {isPlaying ? (
+                        <PauseIcon className="w-6 h-6 text-white" />
+                    ) : (
+                        <PlayIcon className="w-6 h-6 text-white" />
+                    )}
                 </button>
 
                 <button
