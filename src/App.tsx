@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
+import Vinyl from "./pages/Vinyl";
 import Values from "./pages/Values";
 import About from "./pages/About";
 import Gloss from "./pages/Gloss";
@@ -15,6 +16,7 @@ function App() {
         <main className="flex-1 md:ml-16 mb-16 md:mb-0">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/vinyl" element={<Vinyl />} />
             <Route path="/why-gloss" element={<Gloss />} />
             <Route path="/my-values" element={<Values />} />
             <Route path="/about" element={<About />} />
