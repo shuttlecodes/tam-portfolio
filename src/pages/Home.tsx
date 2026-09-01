@@ -22,7 +22,7 @@ const Home = () => {
                             duration: 1.2,
                             ease: [0.22, 1, 0.36, 1]
                         }}
-                        className="absolute w-80 h-80 bg-blue-200 rounded-full"
+                        className="absolute w-80 h-80 bg-accent/60 rounded-full"
                     />
                     <img src={headshot} alt="Headshot" className="max-w-xs relative z-10"/>
                 </div>
