@@ -48,15 +48,15 @@ const Values = () => {
     };
 
     return (
-        <div className="py-20 pr-20 pl-36 bg-bg-pink min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="px-10 md:px-20 py-20 bg-bg-pink min-h-screen flex items-center justify-center overflow-hidden">
             <div className="flex flex-col gap-20 max-w-xl relative">
                 <ScrollFadeIn>
-                    <div className="flex flex-col gap-20 py-70">
-                        <div className="flex gap-10">
+                    <div className="flex flex-col gap-20 md:py-70">
+                        <div className="flex gap-10 flex-col md:flex-row">
                             <h1 className="leading-[1.2]">{CONTEXT_TITLE}</h1>
                             <p className="whitespace-pre-line pt-2">{CONTEXT_BODY}</p>
                         </div>
-                        <div className="flex justify-center">
+                        <div className="hidden md:flex justify-center">
                             <button
                                 type="button"
                                 onClick={scrollToNextSection}
@@ -69,20 +69,20 @@ const Values = () => {
                     </div>
                 </ScrollFadeIn>
 
-                <div ref={nextSectionRef} className="flex flex-col gap-10 py-20">
+                <div ref={nextSectionRef} className="flex flex-col gap-4 md:gap-10 md:py-20">
                     <ScrollFadeIn>
                         <h1>{VAL_TITLE}</h1>
                     </ScrollFadeIn>
                     {VAL_CARDS.map((card, index) => {
                         return (
-                            <div key={card.bold} className={`flex gap-6 items-center ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}>
+                            <div key={card.bold} className={`flex md:gap-6 items-center ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}>
                                 <ScrollFadeIn delay={0.1}>
-                                    <div className="flex flex-col gap-2 bg-white p-6 rounded-lg h-min">
+                                    <div className="flex flex-col md:gap-2 bg-white p-4 md:p-6 rounded-lg h-min">
                                         <p><span className={`${card.color} font-bold`}>{card.bold}</span> {card.body}</p>
                                     </div>
                                 </ScrollFadeIn>
                                 <ScrollFadeIn delay={0.2}>
-                                    <div>{card.visual}</div>
+                                    <div className="hidden md:block">{card.visual}</div>
                                 </ScrollFadeIn>
                             </div>
                         );

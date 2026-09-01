@@ -117,9 +117,8 @@ const Vinyl = () => {
     };
 
     return (
-        <div className="p-6 pt-24 md:py-20 md:px-20 bg-bg-purple min-h-screen flex items-center">
+        <div className="px-10 md:px-20 py-20 bg-bg-purple min-h-screen flex items-center">
             <div className="flex gap-20 flex-col md:flex-row size-full items-center">
-                {/* left col with all the 6 vinyl covers that will act as buttons */}
                 <div className="md:flex flex-col gap-4 w-16 md:w-24 hidden">
                     {VINYL_RECORDS.map((record) => (
                         <button
@@ -140,15 +139,9 @@ const Vinyl = () => {
                     ))}
                 </div>
 
-                {/* right col with the title and details of the selected vinyl */}
                 <div className="flex-1">
                     <ScrollFadeIn>
                         <div className="flex flex-col gap-6">
-                            <div>
-                                {/* <h1>{TITLE}</h1> */}
-                                {/* <h2>{SUBTITLE}</h2> */}
-                            </div>
-                            {/* going to have the vinyl player and the details here */}
                             <div className="flex gap-8 flex-col lg:flex-row">
                                 {/* left col with the turntable and discs that are dependent on which cover is selected */}
                                 <VinylPlayer 

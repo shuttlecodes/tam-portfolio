@@ -12,7 +12,7 @@ const RESUME_TEXT = "For the TLDR, check out my";
 const Home = () => {
 
     return (
-        <div className="p-6 pt-24 md:py-20 md:pr-20 md:pl-36 bg-bg-purple min-h-screen flex items-center justify-center">
+        <div className="px-10 md:px-20 py-20 bg-bg-purple min-h-screen flex items-center justify-center">
             <div className="flex gap-10 md:flex-row flex-col items-center">
                 <div className="relative flex items-center justify-center">
                     <motion.div

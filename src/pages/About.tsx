@@ -23,11 +23,11 @@ const TEXT_CARDS = [
     },
     {
         bold: "So what's next?",
-        body: "I'm touching up my projects page, and working on a more animations, especially in the vinyl page."
+        body: "I'm touching up my projects page, and working on some more animations."
     },
     {
         bold: "Feel free to reach me!",
-        body: "You can find me on LinkedIn via email. I'm always open to chat, whether it's about work or photography, music, food, etc!"
+        body: "You can find me on LinkedIn via email. I'm always open to chat, whether it's about work, photography, badminton, food, or anything in between!"
     }
 ]
 
@@ -45,7 +45,7 @@ const About = () => {
     }, [image]);
 
     return (
-        <div className="p-20 bg-bg-purple min-h-screen flex items-center">
+        <div className="px-10 md:px-20 py-20 bg-bg-purple min-h-screen flex items-center">
             <div className="max-w-2xl mx-auto flex flex-col gap-4">
                 <ScrollFadeIn>
                     <div className="flex flex-col">
