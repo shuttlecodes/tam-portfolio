@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const TITLE = "Hi, I'm Tam Mai";
 const SUBTITLE = "Software engineer 🛠️ and sometimes a designer 🎨 but perpetually a music enthusiast 🎵";
 const BODY_TEXT = "I care about building things well and owning them end to end. This site walks through some of that work, plus what drives me to build.";
-const RESUME_LINK = "For the experience TLDR, check out my resume here:"
+const RESUME_LINK = "For the TLDR, check out my resume here:"
 
 const Home = () => {
 
